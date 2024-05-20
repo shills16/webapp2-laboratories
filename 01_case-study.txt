@@ -1,0 +1,31 @@
+In January 2024, our IT company started a highly ambitious 
+project to create a cutting-edge software solution, with a 
+June 1 launch date. Despite meticulous planning, as the 
+deadline approaches, numerous important tasks remain 
+unfinished, bugs are unresolved, and the testing phase--crucial
+for ensuring product quality—has yet to begin. This case 
+study examines the flaws that caused these delays and provides
+solutions that may have been done to avoid such problems.
+
+One of the primary causes of the delays was poor project 
+planning and scope management. The project was meticulously 
+planned, however it appears that the scope was not well defined 
+or controlled. 
+
+The project had incomplete tasks and unresolved bugs, which 
+indicated problems with task prioritisation and resource allocation. 
+A lack of clear priorities can result in important tasks being 
+overlooked and resources being stretched too thin.
+
+
+
+Recommendations:
+* Establish precise, measurable objectives and needs for the project 
+from the start. This helps to maintain focus and ensures that all 
+team members understand the goals of the project.
+* Implement a strict change control process. Before approval, all 
+suggested scope adjustments should be reviewed in terms of their 
+impact on the schedule, resources, and budget.
+* Regularly assess and adjust resource allocation to ensure that 
+high-priority tasks are adequately staffed and supported. This 
+could include reassigning team members or bringing in new resources.
