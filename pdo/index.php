@@ -1,6 +1,6 @@
 <?php
 
-require 'config.php';
+require '03_php_pdo_mysql_connection.php';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
 $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
