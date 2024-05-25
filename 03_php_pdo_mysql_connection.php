@@ -1,9 +1,9 @@
 <?php
 
-$host = 'localhost'; // your localhost name
-$db = 'posts'; // your database name
-$user = 'root'; // your mysql user
-$password = ''; // your mysql password
+$host = 'localhost'; 
+$db = 'posts'; 
+$user = 'root'; 
+$password = ''; 
 
 $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
 $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
