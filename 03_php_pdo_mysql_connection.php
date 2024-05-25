@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost'; 
-$db = 'posts'; 
+$db = 'students'; 
 $user = 'root'; 
 $password = ''; 
 
