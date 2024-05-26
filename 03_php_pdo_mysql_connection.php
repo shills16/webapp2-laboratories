@@ -12,9 +12,7 @@ try {
     $pdo = new PDO($dsn, $user, $password, $options);
 
     if ($pdo) {
-        echo "Connected to the $db database successfully!";
-
-        // execute a query
+        echo "Connected successfully!";
     }
 } catch (PDOException $e) {
     echo $e->getMessage();
