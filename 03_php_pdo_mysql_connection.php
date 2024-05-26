@@ -14,6 +14,7 @@ try {
     if ($pdo) {
         echo "Connected successfully!";
     }
+    
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
