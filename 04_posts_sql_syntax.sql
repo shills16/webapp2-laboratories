@@ -107,7 +107,8 @@ INSERT INTO posts (user_id, title, body) VALUES
 (10,"quas fugiat ut perspiciatis vero provident","eum non blanditiis soluta porro quibusdam voluptas\nvel voluptatem qui placeat dolores qui velit aut\nvel inventore aut cumque culpa explicabo aliquid at\nperspiciatis est et voluptatem dignissimos dolor itaque sit nam"),
 (10,"laboriosam dolor voluptates","doloremque ex facilis sit sint culpa\nsoluta assumenda eligendi non ut eius\nsequi ducimus vel quasi\nveritatis est dolores"),
 (10, "temporibus sit alias delectus eligendi possimus magni","quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia"),
-(10,"at nam consequatur ea labore ea harum","cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut");
+(10,"at nam consequatur ea labore ea harum","cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut")
+;
 
 
 
