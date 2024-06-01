@@ -1,10 +1,9 @@
-CREATE DATABASE posts;
-USE posts;
 CREATE TABLE posts (
-    user_id INT NOT NULL,
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255),
-    body VARCHAR(255)
+    body VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 INSERT INTO posts (user_id, title, body) VALUES
