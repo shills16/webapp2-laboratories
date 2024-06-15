@@ -21,7 +21,7 @@ try {
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
-                if($password === "Secret123") {
+                if($password === "secret123") {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['name'] = $user['name'];
                     $_SESSION['username'] = $user['username'];
@@ -29,10 +29,10 @@ try {
                     header('Location: posts.php');
                     exit;
                 } else {
-                    echo "Invalid Password";
+                    $_SESSION['error'] = "Invalid password. Please try again.";
                 }
             } else{
-                echo "User not found"; 
+                $_SESSION['error'] = "User not found. Please try again.";
             }
         }
     }   
@@ -76,6 +76,16 @@ try {
             color: white;
             border-radius: 10px;
             padding: 30px 40px;
+            position: relative;
+        }
+
+        .error-message {
+            color: red;
+            position: absolute;
+            margin-left: 55px;
+            top: 70px;
+            padding: 10px;
+            font-size: 14px;
         }
 
         .login-page h1 {
@@ -139,6 +149,14 @@ try {
     <div id="login-form" class="login-page">
         <form method= "POST" action= <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> >
             <h1>Login</h1>
+
+            <?php
+            if (isset($_SESSION['error'])) {
+                echo '<div class="error-message">' . $_SESSION['error'] . '</div>';
+                unset($_SESSION['error']);
+            }
+            ?>
+
             <div class="input-box">
                 <input type="text" name="username" id="username" class="box" placeholder="Enter username" required="">
                 <i class='bx bxs-user'></i>

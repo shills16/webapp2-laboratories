@@ -15,53 +15,73 @@
 
         body {
             background: url("1.jpg") no-repeat center / cover;
+            backdrop-filter: blur(5px);
         }
 
         .posts-container {
-            width: 50vw;
-            margin: 50px auto;
-            background: transparent;
+            width: 40vw;
+            height: 97vh;
+            margin: auto;
+            margin-top: 10px;
             border: 2px solid rgba(255, 255, 255, .2);
-            backdrop-filter: blur(20px);
             box-shadow: 0 0 10px rgba(0, 0, 0, .2);
             color: white;
             border-radius: 10px;
-            padding: 30px 40px;
+            padding: 27px 40px;
+            position: relative;
         }
 
         .posts-container h1 {
             font-size: 36px;
             text-align: center;
             color: white;
+            margin-bottom: 10px;
         }
 
         ul {
             list-style-type: none;
-            padding: 0;
+            /* padding: 20px; */
         }
 
         li {
-            margin: 20px 40px;
+            margin-bottom: 10px;
             border: 1px solid #ddd;
             padding: 10px;
-            border-radius: 20px;
-            background-color: #eceaec;
+            border-radius: 5px;
+            background-color: #f9f9ff;
             cursor: pointer;
-            font-size: 30px;
-            color: black;
-            transition: .9s;
-            word-spacing: 10px;
-        }
-
-        li:hover {
-            transform: scale(1.2);
-            background-color: #ddd;
+            transition: .5s;
         }
 
         a {
             text-decoration: none;
             color: black;
+        } 
+
+        li:hover {
+            transform: scale(1.1);
+            background-color: #F5DDE0;
+            border: solid 1px #F5DDE0;
         }
+
+        .logout-button {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            right: 20px;
+            margin-right: 20px;
+        }
+
+        .logout-button:hover {
+            background-color: #ff1c3c;
+        }
+
     </style>
 </head>
 <body>
@@ -71,9 +91,6 @@
             <?php
 
             require "config.php";
-
-            // echo '<pre>';
-            // print_r($_SESSION);
 
             if (!isset($_SESSION['user_id'])) {
                 header("Location: login.php");
@@ -87,7 +104,7 @@
                 $pdo = new PDO($dsn, $user, $password, $options);
 
                 if ($pdo) {
-                    // echo "Connected successfully!";
+            
                     $user_id = $_SESSION['user_id'];
 
                     $sql = "SELECT * FROM `posts` WHERE user_Id = :id";
@@ -108,6 +125,10 @@
 
             ?>
         </ul>
+
+        <form action="logout.php" method="post">
+            <button type="submit" class="logout-button">Logout</button>
+        </form>
     </div>
 </body>
 </html>
