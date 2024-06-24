@@ -9,19 +9,19 @@ try {
     $pdo = new PDO($dsn, $user, $password, $options);
 
     if ($pdo) {
-        // echo "Connected successfully!";
+        
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $username = strtolower($_POST['username']);
             $password = $_POST['password'];
 
-            $sql = "SELECT * FROM `users` WHERE username = :username";
-            $statement = $pdo->prepare($sql);
+            $sql = "SELECT * FROM `users` WHERE username = :username"; //parameter binding
+            $statement = $pdo->prepare($sql); 
             $statement->execute(['username' => $username]);
 
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
-                if($password === "secret123") {
+                if($password === 'secret123') {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['name'] = $user['name'];
                     $_SESSION['username'] = $user['username'];
@@ -147,7 +147,7 @@ try {
 </head>
 <body>
     <div id="login-form" class="login-page">
-        <form method= "POST" action= <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> >
+        <form method= "POST" action= "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" >
             <h1>Login</h1>
 
             <?php
